@@ -358,7 +358,8 @@ const people = [
 console.log(people); // you can remove it
 
 // write your code here
-const table = document.querySelector('TBODY');
+const table = document.querySelector('.dashboard tbody');
+let rows = '';
 
 people.forEach((el) => {
   const sex = el.sex === 'm' ? 'Male' : 'Female';
@@ -373,5 +374,6 @@ people.forEach((el) => {
     </tr>
     `;
 
-  table.innerHTML += row;
+  rows += row;
 });
+table.innerHTML = rows;
